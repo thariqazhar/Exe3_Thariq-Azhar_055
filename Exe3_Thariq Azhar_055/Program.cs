@@ -141,5 +141,14 @@ namespace Exercise_Linked_List_A
                         + currentNode.name + "\n");
             }
         }
+
+        /*Creating a method to shwo the first record in the list*/
+        public void firstNode()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+                Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "     " + LAST.next.name);
+        }
     }
 }
