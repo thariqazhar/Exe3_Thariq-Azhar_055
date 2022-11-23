@@ -115,5 +115,14 @@ namespace Exercise_Linked_List_A
             current.next.prev = previous;
             return true;
         }
+
+        /*Create a method for showing that the list is empty*/
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
     }
 }
