@@ -167,7 +167,19 @@ namespace Exercise_Linked_List_A
                     Console.WriteLine("6. Exit");
                     Console.Write("\nEnter your choice (1-4): ");
                     char ch = Convert.ToChar(Console.ReadLine());
-                    
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNode();
+                            }
+                            break;
+                        default:
+                            {
+                                Console.WriteLine("Invalid option");
+                                break;
+                            }
+                    }
                 }
                 catch (Exception e)
                 {
