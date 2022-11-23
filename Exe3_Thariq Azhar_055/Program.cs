@@ -191,6 +191,11 @@ namespace Exercise_Linked_List_A
                                     Console.WriteLine("Record with roll number " + rollNo + "deleted \n");
                             }
                             break;
+                        case '3':
+                            {
+                                obj.traverse();
+                            }
+                            break;
                         default:
                             {
                                 Console.WriteLine("Invalid option");
