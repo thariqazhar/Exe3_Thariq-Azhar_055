@@ -77,5 +77,17 @@ namespace Exercise_Linked_List_A
             current.prev = newNode;
             previous.next = newNode;
         }
+
+        /*Searches for the specified node*/
+        public bool Search(int rollNo, ref Node previous, ref Node current)
+        {
+            for (previous = current = LAST; current != null &&
+                rollNo != current.rollNumber; previous = current,
+                current = current.next)
+            { }
+            /*The above for loop traverses the list. If the specified node
+             is found then the function return true, otherwise false.*/
+            return (current != null);
+        }
     }
 }
