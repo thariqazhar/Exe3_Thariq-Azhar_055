@@ -89,5 +89,31 @@ namespace Exercise_Linked_List_A
              is found then the function return true, otherwise false.*/
             return (current != null);
         }
+
+        /*Deletes the specified node*/
+        public bool delNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            if (current == LAST)/*If the first node is to be deleted*/
+            {
+                LAST = LAST.next;
+                if (LAST != null)
+                    LAST.prev = null;
+                return true;
+            }
+            if (current.next == null)/*if the last node is to be deleted*/
+            {
+                previous.next = null;
+                return true;
+            }
+            /*If the node to be deleted is in between the list then the
+             following lines of code is executed*/
+            previous.next = current.next;
+            current.next.prev = previous;
+            return true;
+        }
     }
 }
