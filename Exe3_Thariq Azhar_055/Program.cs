@@ -174,6 +174,23 @@ namespace Exercise_Linked_List_A
                                 obj.addNode();
                             }
                             break;
+                        case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Console.Write("\nEnter the roll number of the student" +
+                                    " whose record is to be deleted: ");
+                                int rollNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(rollNo) == false)
+                                    Console.WriteLine("Record not found");
+                                else
+                                    Console.WriteLine("Record with roll number " + rollNo + "deleted \n");
+                            }
+                            break;
                         default:
                             {
                                 Console.WriteLine("Invalid option");
