@@ -222,6 +222,8 @@ namespace Exercise_Linked_List_A
                                 obj.firstNode();
                             }
                             break;
+                        case '6':
+                            return;
                         default:
                             {
                                 Console.WriteLine("Invalid option");
